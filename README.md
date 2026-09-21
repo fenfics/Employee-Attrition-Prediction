@@ -89,6 +89,15 @@ Power BI is used to present the model results and key findings in an interactive
 * Jupyter Notebook
 * Power BI
 
+## Power BI Dashboard
+
+The Power BI dashboard presents the KNN model results, including K selection, model performance, and the confusion matrix.
+
+![Employee Attrition KNN Dashboard](visualizations/powerbi/employee_attrition_dashboard.png)
+
+The interactive Power BI report is available in [`visualizations/powerbi/`](visualizations/powerbi/).
+
+
 ## Team
 
 This project was developed as a group machine learning project.
