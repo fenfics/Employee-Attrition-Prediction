@@ -1,10 +1,13 @@
 # Employee Attrition Prediction
 
-An employee attrition prediction project using machine learning to analyze factors related to employee turnover and predict employee attrition.
+A group machine learning project that analyzes employee-related factors and develops classification models to predict employee attrition.
+
+> **Project Status:** In Progress
+> **Project Type:** Group Machine Learning Project
 
 ## Project Overview
 
-This project analyzes employee-related data and develops machine learning models to predict whether an employee is likely to leave the organization.
+This project analyzes employee-related data to explore factors associated with employee attrition and develop machine learning models for predicting whether an employee is likely to leave the organization.
 
 The project includes:
 
@@ -13,8 +16,8 @@ The project includes:
 * Data visualization
 * K-Nearest Neighbors (KNN)
 * Naive Bayes
-* Model evaluation and comparison
-* Power BI dashboard
+* Model evaluation
+* Power BI visualization
 
 ## Dataset
 
@@ -58,11 +61,11 @@ KNN is used to classify employees into:
 * `0` = No Attrition
 * `1` = Attrition
 
-The optimal value of K is selected using 5-Fold Cross-Validation.
+The K value is selected using 5-Fold Cross-Validation, and the model is evaluated using classification metrics.
 
 ### Naive Bayes
 
-Naive Bayes is used as another classification model for predicting employee attrition and comparing its performance with KNN.
+Naive Bayes is being developed as another classification model for predicting employee attrition. Its results will be used for comparison with the KNN model.
 
 ## Evaluation
 
@@ -74,9 +77,37 @@ The models are evaluated using:
 * F1-score
 * Confusion Matrix
 
+Additional evaluation and model comparison may be included as the project progresses.
+
 ## Visualization
 
-Power BI is used to present the model results and key findings in an interactive dashboard.
+Power BI is used to visualize the analysis and model results.
+
+The current Power BI work focuses on presenting the **KNN analysis**, including K selection, model performance, and the confusion matrix.
+
+## Power BI Visualization
+
+The Power BI visualization presents results from the KNN analysis, including:
+
+* K selection
+* Model performance
+* Confusion Matrix
+
+![Employee Attrition KNN Dashboard](visualizations/powerbi/employee_attrition_dashboard.png)
+
+> **Note:** The overall project and Power BI work are currently in progress as different parts of the group project are being developed.
+
+## My Contribution
+
+My main responsibility in this project is the **K-Nearest Neighbors (KNN)** component.
+
+My contributions include:
+
+* Preparing and preprocessing data required for KNN classification
+* Selecting the K value using 5-Fold Cross-Validation
+* Training and evaluating the KNN model
+* Analyzing model performance using classification metrics
+* Creating Power BI visualizations for the KNN analysis
 
 ## Tools and Technologies
 
@@ -89,17 +120,6 @@ Power BI is used to present the model results and key findings in an interactive
 * Jupyter Notebook
 * Power BI
 
-## Power BI Dashboard
-
-The Power BI dashboard presents the KNN model results, including K selection, model performance, and the confusion matrix.
-
-![Employee Attrition KNN Dashboard](visualizations/powerbi/employee_attrition_dashboard.png)
-
-The interactive Power BI report is available in [`visualizations/powerbi/`](visualizations/powerbi/).
-
-
 ## Team
 
-This project was developed as a group machine learning project.
-
-Each member was responsible for different parts of the project, including data preprocessing, exploratory data analysis, KNN, Naive Bayes, model comparison, and visualization.
+This project was developed as a group machine learning project, with different members responsible for different components including data preprocessing, exploratory data analysis, KNN, Naive Bayes, and visualization.
