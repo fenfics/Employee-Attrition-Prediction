@@ -1,0 +1,5 @@
+Actual,Predicted,Count
+No Attrition,No Attrition,6961
+No Attrition,Attrition,141
+Attrition,No Attrition,1425
+Attrition,Attrition,161
