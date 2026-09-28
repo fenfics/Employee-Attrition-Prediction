@@ -47,6 +47,7 @@ Employee-Attrition-Prediction/
 │
 ├── visualizations/
 │   └── powerbi/
+│       └── knn_dashboard.png
 │
 ├── README.md
 └── requirements.txt
@@ -61,25 +62,33 @@ KNN is used to classify employees into:
 * `0` = No Attrition
 * `1` = Attrition
 
-The K value and model configuration are selected using **5-Fold Stratified Cross-Validation** with Macro F1 as the main evaluation metric.
+The K value and model configuration are selected using **5-Fold Stratified Cross-Validation**, with Macro F1 as the main evaluation metric.
 
 The final KNN configuration is:
 
-* **K:** 48
+* **Features:** 33
+* **K:** 3
 * **Weight:** uniform
-* **SMOTE:** Used
-* **CV Macro F1:** 0.5833 ± 0.0045
+* **SMOTE:** Not used
+* **CV Macro F1:** 0.6007 ± 0.0057
 
 On the test set, the final KNN model achieved:
 
-* **Accuracy:** 65.09%
-* **Macro F1:** 58.59%
-* **Balanced Accuracy:** 66.89%
-* **ROC-AUC:** 72.46%
+* **Accuracy:** 80.31%
+* **Macro F1:** 61.02%
+* **Balanced Accuracy:** 59.72%
+* **ROC-AUC:** 67.17%
+
+Class-specific F1-scores:
+
+* **No Attrition:** 88.44%
+* **Attrition:** 33.61%
+
+The model evaluation also includes a confusion matrix to examine the number of correct and incorrect predictions for each class.
 
 ### Naive Bayes
 
-Naive Bayes is being developed as another classification model for predicting employee attrition. Its results will be used for comparison with the KNN model.
+Naive Bayes is being developed as another classification model for predicting employee attrition. Its results will be compared with the KNN model using common classification metrics.
 
 ## Evaluation
 
@@ -96,42 +105,25 @@ The models are evaluated using:
 
 For the KNN model, **Macro F1** is used as the main metric during cross-validation because the target classes are imbalanced.
 
+In addition to Macro F1, F1-score for each class is examined to evaluate the model's performance on both **No Attrition** and **Attrition** classes.
+
 ## Visualization
 
-Power BI is used to visualize the analysis and model results.
+Power BI is used to visualize the KNN model analysis and evaluation results.
 
-The current Power BI dashboard focuses on the KNN analysis and includes:
+The dashboard includes:
 
-* Employee Attrition Overview
-* KNN Model Selection
-* Final Model Performance
+* KNN model configuration
+* Model performance metrics
+* F1-score by class
 * Confusion Matrix
-* Performance by Class
+* K selection using 5-Fold Cross-Validation
 
-## Power BI Visualization
+## Power BI Dashboard
 
-The Power BI dashboard presents the KNN analysis across three main sections.
+The current Power BI dashboard presents the KNN model analysis and final evaluation results.
 
-### 1. Employee Attrition Overview
-
-Presents the dataset overview, attrition distribution, and selected KNN model configuration.
-
-![Employee Attrition Overview](visualizations/powerbi/employee_attrition_overview.png)
-
-### 2. KNN Model Selection
-
-Presents the comparison between the baseline KNN and KNN with SMOTE using 5-Fold Stratified Cross-Validation, including K selection and weight comparison.
-
-![KNN Model Selection](visualizations/powerbi/knn_model_selection.png)
-
-### 3. Final Model Performance
-
-Presents the final KNN model's test-set metrics, performance by class, and confusion matrix.
-
-![KNN Final Model Performance](visualizations/powerbi/knn_final_model_performance.png)
-
-
-> **Note:** The overall project is still in progress as different parts of the group project are being developed.
+![KNN Dashboard](visualizations/powerbi/knn_dashboard.png)
 
 ## My Contribution
 
@@ -141,7 +133,7 @@ My contributions include:
 
 * Preparing and preprocessing data required for KNN classification
 * Selecting the K value using 5-Fold Stratified Cross-Validation
-* Comparing KNN configurations with and without SMOTE
+* Comparing K values from 1 to 50
 * Comparing uniform and distance weighting
 * Training and evaluating the final KNN model
 * Analyzing model performance using classification metrics
@@ -153,7 +145,6 @@ My contributions include:
 * Pandas
 * NumPy
 * Scikit-learn
-* imbalanced-learn
 * Matplotlib
 * Seaborn
 * Jupyter Notebook
@@ -162,3 +153,16 @@ My contributions include:
 ## Team
 
 This project was developed as a group machine learning project, with different members responsible for different components including data preprocessing, exploratory data analysis, KNN, Naive Bayes, and visualization.
+
+```
+
+### ข้อจำกัดและการใช้งานอย่างมีจริยธรรม
+
+The model identifies patterns and relationships in the dataset but does not establish causal relationships between employee-related factors and attrition.
+
+The model should not be used to make individual employment decisions such as promotion or termination, or to rank individual employees based on predicted attrition risk.
+
+Model predictions should be treated as supporting information for further analysis rather than as definitive outcomes.
+
+**จุดสำคัญที่ผมแก้ให้แล้ว:** `K=48 → K=3`, `SMOTE Used → Not used`, `11 features → 33 features`, metric เป็นผลล่าสุด และเปลี่ยน Power BI จาก 3 รูปเหลือ `knn_dashboard.png` รูปเดียวครับ
+```
