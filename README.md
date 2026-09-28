@@ -164,5 +164,5 @@ The model should not be used to make individual employment decisions such as pro
 
 Model predictions should be treated as supporting information for further analysis rather than as definitive outcomes.
 
-**จุดสำคัญที่ผมแก้ให้แล้ว:** `K=48 → K=3`, `SMOTE Used → Not used`, `11 features → 33 features`, metric เป็นผลล่าสุด และเปลี่ยน Power BI จาก 3 รูปเหลือ `knn_dashboard.png` รูปเดียวครับ
+เดียวครับ
 ```
