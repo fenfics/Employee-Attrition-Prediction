@@ -1,2 +1,0 @@
-Model_Type,N_Features,Best_K,Best_Weight,CV_Macro_F1,CV_F1_No_Attrition,CV_F1_Attrition,Test_Accuracy,Test_Macro_F1,Test_F1_No_Attrition,Test_F1_Attrition,Test_ROC_AUC
-KNN,33,3,uniform,0.6007193731892672,0.8844669737315982,0.3169717726469359,80.31,61.02,88.44,33.6,67.17
