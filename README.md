@@ -61,7 +61,21 @@ KNN is used to classify employees into:
 * `0` = No Attrition
 * `1` = Attrition
 
-The K value is selected using 5-Fold Cross-Validation, and the model is evaluated using classification metrics.
+The K value and model configuration are selected using **5-Fold Stratified Cross-Validation** with Macro F1 as the main evaluation metric.
+
+The final KNN configuration is:
+
+* **K:** 48
+* **Weight:** uniform
+* **SMOTE:** Used
+* **CV Macro F1:** 0.5833 ± 0.0045
+
+On the test set, the final KNN model achieved:
+
+* **Accuracy:** 65.09%
+* **Macro F1:** 58.59%
+* **Balanced Accuracy:** 66.89%
+* **ROC-AUC:** 72.46%
 
 ### Naive Bayes
 
@@ -75,27 +89,49 @@ The models are evaluated using:
 * Precision
 * Recall
 * F1-score
+* Macro F1
+* Balanced Accuracy
+* ROC-AUC
 * Confusion Matrix
 
-Additional evaluation and model comparison may be included as the project progresses.
+For the KNN model, **Macro F1** is used as the main metric during cross-validation because the target classes are imbalanced.
 
 ## Visualization
 
 Power BI is used to visualize the analysis and model results.
 
-The current Power BI work focuses on presenting the **KNN analysis**, including K selection, model performance, and the confusion matrix.
+The current Power BI dashboard focuses on the KNN analysis and includes:
+
+* Employee Attrition Overview
+* KNN Model Selection
+* Final Model Performance
+* Confusion Matrix
+* Performance by Class
 
 ## Power BI Visualization
 
-The Power BI visualization presents results from the KNN analysis, including:
+The Power BI dashboard presents the KNN analysis across three main sections.
 
-* K selection
-* Model performance
-* Confusion Matrix
+### 1. Employee Attrition Overview
 
-![Employee Attrition KNN Dashboard](visualizations/powerbi/employee_attrition_dashboard.png)
+Presents the dataset overview, attrition distribution, and selected KNN model configuration.
 
-> **Note:** The overall project and Power BI work are currently in progress as different parts of the group project are being developed.
+![Employee Attrition Overview](visualizations/powerbi/employee_attrition_overview.png)
+
+### 2. KNN Model Selection
+
+Presents the comparison between the baseline KNN and KNN with SMOTE using 5-Fold Stratified Cross-Validation, including K selection and weight comparison.
+
+![KNN Model Selection](visualizations/powerbi/knn_model_selection.png)
+
+### 3. Final Model Performance
+
+Presents the final KNN model's test-set metrics, performance by class, and confusion matrix.
+
+![KNN Final Model Performance](visualizations/powerbi/knn_final_model_performance.png)
+
+
+> **Note:** The overall project is still in progress as different parts of the group project are being developed.
 
 ## My Contribution
 
@@ -104,8 +140,10 @@ My main responsibility in this project is the **K-Nearest Neighbors (KNN)** comp
 My contributions include:
 
 * Preparing and preprocessing data required for KNN classification
-* Selecting the K value using 5-Fold Cross-Validation
-* Training and evaluating the KNN model
+* Selecting the K value using 5-Fold Stratified Cross-Validation
+* Comparing KNN configurations with and without SMOTE
+* Comparing uniform and distance weighting
+* Training and evaluating the final KNN model
 * Analyzing model performance using classification metrics
 * Creating Power BI visualizations for the KNN analysis
 
@@ -115,6 +153,7 @@ My contributions include:
 * Pandas
 * NumPy
 * Scikit-learn
+* imbalanced-learn
 * Matplotlib
 * Seaborn
 * Jupyter Notebook
