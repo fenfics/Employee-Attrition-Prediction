@@ -1,2 +1,2 @@
-Model_Type,N_Features,Best_K,Best_Weight,CV_Macro_F1,CV_F1_No_Attrition,CV_F1_Attrition,Test_Accuracy,Test_Macro_F1,Test_F1_No_Attrition,Test_F1_Attrition,Test_ROC_AUC
-KNN,33,3,uniform,0.6007193731892672,0.8844669737315982,0.3169717726469359,80.31,61.02,88.44,33.6,67.17
+Model_Type,N_Features,Best_K,Best_Weight,CV_Macro_F1,CV_F1_No_Attrition,CV_F1_Attrition,Test_Accuracy,Test_Macro_F1,Test_F1_No_Attrition,Test_F1_Attrition,Test_Balanced_Accuracy,Test_ROC_AUC
+KNN,33,3,uniform,0.6007193731892672,0.8844669737315982,0.3169717726469359,0.8030616942909761,0.6102168750822528,0.8843840800054058,0.33604967015909976,0.5972222271544559,0.6717084649795824
