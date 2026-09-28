@@ -156,7 +156,7 @@ This project was developed as a group machine learning project, with different m
 
 ```
 
-### ข้อจำกัดและการใช้งานอย่างมีจริยธรรม
+### Limited
 
 The model identifies patterns and relationships in the dataset but does not establish causal relationships between employee-related factors and attrition.
 
@@ -164,5 +164,4 @@ The model should not be used to make individual employment decisions such as pro
 
 Model predictions should be treated as supporting information for further analysis rather than as definitive outcomes.
 
-เดียวครับ
 ```
