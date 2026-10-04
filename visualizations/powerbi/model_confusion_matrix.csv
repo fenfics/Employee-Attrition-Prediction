@@ -1,0 +1,9 @@
+model,actual_class,predicted_class,count
+KNN,No Attrition,No Attrition,6683
+KNN,No Attrition,Attrition,419
+KNN,Attrition,No Attrition,1090
+KNN,Attrition,Attrition,496
+Naive Bayes,No Attrition,No Attrition,6293
+Naive Bayes,No Attrition,Attrition,809
+Naive Bayes,Attrition,No Attrition,761
+Naive Bayes,Attrition,Attrition,825

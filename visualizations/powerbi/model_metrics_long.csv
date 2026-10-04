@@ -1,0 +1,15 @@
+model,split,feature_set,imbalance_strategy,metric,value
+Naive Bayes,80:20,Top 22 Most Important features,Baseline,Accuracy,0.8192909760589319
+KNN,80:20,Top 22 Most Important features,Baseline,Accuracy,0.8263121546961326
+Naive Bayes,80:20,Top 22 Most Important features,Baseline,Precision,0.5048959608323134
+KNN,80:20,Top 22 Most Important features,Baseline,Precision,0.5420765027322404
+Naive Bayes,80:20,Top 22 Most Important features,Baseline,Recall,0.5201765447667087
+KNN,80:20,Top 22 Most Important features,Baseline,Recall,0.31273644388398486
+Naive Bayes,80:20,Top 22 Most Important features,Baseline,F1 (Attrition),0.5124223602484472
+KNN,80:20,Top 22 Most Important features,Baseline,F1 (Attrition),0.396641343462615
+Naive Bayes,80:20,Top 22 Most Important features,Baseline,Macro F1,0.7007576621813019
+KNN,80:20,Top 22 Most Important features,Baseline,Macro F1,0.6475979826556773
+Naive Bayes,80:20,Top 22 Most Important features,Baseline,Balanced Accuracy,0.7031324852811296
+KNN,80:20,Top 22 Most Important features,Baseline,Balanced Accuracy,0.6268694891906548
+Naive Bayes,80:20,Top 22 Most Important features,Baseline,ROC-AUC,0.8099008928802892
+KNN,80:20,Top 22 Most Important features,Baseline,ROC-AUC,0.7469529301551914

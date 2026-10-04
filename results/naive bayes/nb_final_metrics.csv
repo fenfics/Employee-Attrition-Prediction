@@ -1,0 +1,2 @@
+Model,Split,Feature_Set,N_Features,Strategy,Var_Smoothing,Accuracy,Precision,Recall,F1,Macro_F1,Balanced_Accuracy,ROC_AUC
+Naive Bayes,80:20,Top 22 Most Important features,22,Baseline,0.01,0.8192909760589319,0.5048959608323134,0.5201765447667087,0.5124223602484472,0.7007576621813019,0.7031324852811296,0.8099008928802892
