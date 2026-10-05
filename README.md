@@ -47,7 +47,11 @@ Employee-Attrition-Prediction/
 │
 ├── visualizations/
 │   └── powerbi/
-│       └── knn_dashboard.png
+│       ├── model_overview.png
+│       ├── knn_model_performance.png
+│       ├── naive_bayes_experiments.png
+│       ├── model_evaluation.png
+│       └── model_comparison.png
 │
 ├── README.md
 └── requirements.txt
@@ -88,7 +92,17 @@ The model evaluation also includes a confusion matrix to examine the number of c
 
 ### Naive Bayes
 
-Naive Bayes is being developed as another classification model for predicting employee attrition. Its results will be compared with the KNN model using common classification metrics.
+Naive Bayes is used as a second classification model for predicting employee attrition.
+
+The Naive Bayes experiments compare different:
+
+* Feature sets
+* Class imbalance strategies
+* `var_smoothing` values
+
+Model performance is evaluated using common classification metrics, including Macro F1 and F1-score for the Attrition class.
+
+The Naive Bayes results are compared with the KNN model in the final model comparison dashboard.
 
 ## Evaluation
 
@@ -103,27 +117,45 @@ The models are evaluated using:
 * ROC-AUC
 * Confusion Matrix
 
-For the KNN model, **Macro F1** is used as the main metric during cross-validation because the target classes are imbalanced.
+For model selection, **Macro F1** is emphasized because the target classes are imbalanced.
 
-In addition to Macro F1, F1-score for each class is examined to evaluate the model's performance on both **No Attrition** and **Attrition** classes.
+In addition to overall performance, F1-score and Recall for each class are examined to evaluate performance on both **No Attrition** and **Attrition** classes.
 
 ## Visualization
 
-Power BI is used to visualize the KNN model analysis and evaluation results.
+Power BI is used to visualize the machine learning experiments, model evaluation, and comparison between KNN and Naive Bayes.
 
-The dashboard includes:
+The Power BI dashboard consists of five pages:
 
-* KNN model configuration
-* Model performance metrics
-* F1-score by class
-* Confusion Matrix
-* K selection using 5-Fold Cross-Validation
+### 1. Model Overview
 
-## Power BI Dashboard
+Provides an overview of the dataset, classification problem, and overall model performance.
 
-The current Power BI dashboard presents the KNN model analysis and final evaluation results.
+![Model Overview](visualizations/powerbi/model_overview.png)
 
-![KNN Dashboard](visualizations/powerbi/knn_dashboard.png)
+### 2. KNN Model Performance
+
+Shows KNN performance across different K values and the selected KNN configuration.
+
+![KNN Model Performance](visualizations/powerbi/knn_model_performance.png)
+
+### 3. Naive Bayes Experiments
+
+Shows the effects of feature sets, class imbalance strategies, and `var_smoothing` values on Naive Bayes performance, as well as permutation feature importance.
+
+![Naive Bayes Experiments](visualizations/powerbi/naive_bayes_experiments.png)
+
+### 4. Model Evaluation
+
+Shows detailed model evaluation using class-level metrics and confusion matrices.
+
+![Model Evaluation](visualizations/powerbi/model_evaluation.png)
+
+### 5. Model Comparison
+
+Compares the final KNN and Naive Bayes models using common classification metrics.
+
+![Model Comparison](visualizations/powerbi/model_comparison.png)
 
 ## My Contribution
 
@@ -154,14 +186,10 @@ My contributions include:
 
 This project was developed as a group machine learning project, with different members responsible for different components including data preprocessing, exploratory data analysis, KNN, Naive Bayes, and visualization.
 
-```
+## Limitations
 
-### Limited
+The models identify patterns and relationships in the dataset but do not establish causal relationships between employee-related factors and attrition.
 
-The model identifies patterns and relationships in the dataset but does not establish causal relationships between employee-related factors and attrition.
-
-The model should not be used to make individual employment decisions such as promotion or termination, or to rank individual employees based on predicted attrition risk.
+The models should not be used to make individual employment decisions such as promotion or termination, or to rank individual employees based on predicted attrition risk.
 
 Model predictions should be treated as supporting information for further analysis rather than as definitive outcomes.
-
-```
